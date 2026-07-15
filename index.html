@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texture Map Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Texture Map Generator</h1>
+
+    <button id="themeBtn">
+        🌙 Night Mode
+    </button>
+
+</header>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <h2>Generator</h2>
+
+        <input type="file" id="f" accept="image/*">
+
+        <br><br>
+
+        <label>
+
+            Strength
+
+        </label>
+
+        <input
+            type="range"
+            id="s"
+            min="1"
+            max="10"
+            value="2">
+
+        <p id="strengthValue">
+            2
+        </p>
+
+        <button id="generate">
+
+            Generate Maps
+
+        </button>
+
+        <button id="d">
+
+            Download Normal
+
+        </button>
+
+        <button id="downloadDisp">
+
+            Download Displacement
+
+        </button>
+
+    </aside>
+
+    <main class="preview">
+
+        <div class="card">
+
+            <h3>Original</h3>
+
+            <canvas id="src"></canvas>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Normal Map</h3>
+
+            <canvas id="dst"></canvas>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Displacement</h3>
+
+            <canvas id="disp"></canvas>
+
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+
+    Texture Map Generator © 2026
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
